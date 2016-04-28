@@ -1,0 +1,111 @@
+* {
+	font-family: 'Î¢ÈíÑÅºÚ';
+}
+
+.div {
+	width: 100%;
+	height: 500px;
+}
+
+.div .above {
+	float: left;
+	background: gray;
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	z-index: 501;
+	top: 0px;
+	left: 0;
+}
+
+.div .middle-above {
+	border-bottom: 2px solid gray;
+	width: 100%;
+	height: 2%;
+	float: right;
+	padding: 60px 0px 26px 23px;
+	right: 0px;
+}
+
+.div .middle-middle {
+	border-bottom: 2px solid gray;
+	width: 100%;
+	height: 2%;
+	padding: 20px;
+	float: right;
+	right: 0px;
+	border-right: 2px solid gray;
+}
+
+.div .above ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 20px;
+}
+
+ul li {
+	float: right;
+}
+
+ul a {
+	text-decoration: none;
+	width: 60px;
+	color: #272323;
+	padding: 0px 15px;
+}
+
+a {
+	text-decoration: none;
+	width: 60px;
+	color: #272323;
+	padding: 0px 15px;
+}
+
+.div .middle {
+	border-bottom: 2px solid gray;
+	width: 100%;
+	height: 10%;
+	float: left;
+	padding: 78px 0 0px 8px;
+}
+
+.div .bottom {
+	margin: auto;
+	float: left;
+	width: 100%;
+	padding: 40px 30px 0px 250px;
+}
+
+.div .bottom input {
+	height: 30px;
+	width: 200px;
+	margin: 8px 4px;
+}
+
+.div  .button {
+	padding: 0 30px 50px 380px;
+	height: 30px;
+	float: left;
+}
+
+input {
+	width: 80px;
+	height: 30px;
+}
+
+.left-menu {
+	position: absolute;
+	left: 0;
+	width: 400px;
+	padding: 10px 0 0 27px;
+}
+
+.error-info {
+	width: 150px;
+	height: 30px;
+	top: 38px;
+	color: red;
+	float: right;
+	margin: 8px 20px;
+	display: none
+}

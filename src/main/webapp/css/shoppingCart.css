@@ -1,0 +1,101 @@
+
+.div{
+	    border: 2px solid grey;
+	        height: 590px;
+    width: 100%;
+}
+
+.div .above {
+	float: left;
+	background: gray;
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	z-index: 501;
+	top: 0px;
+	left: 0;
+}
+
+
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 20px;
+}
+
+.div .above ul li {
+	float: right;
+	padding: 2px 0 0 0;
+}
+
+.div .above ul a {
+	text-decoration: none;
+	width: 60px;
+	color: #272323;
+	padding: 0px 15px;
+}
+
+
+.div .middle-above {
+	border-bottom: 2px solid gray;
+	    width: 97.5%;
+	height: 2%;
+	float: right;
+	padding: 60px 0px 26px 23px;
+	right: 0px;
+}
+.div .middle-middle {
+	border-bottom: 2px solid gray;
+	width: 95.4%;
+	height: 2%;
+	padding: 20px;
+	float: right;
+	right: 0px;
+	
+}
+.div .middle {
+	border-bottom: 2px solid gray;
+	width: 100%;
+	height: 8%;
+	float: left;
+	padding: 20px;
+}
+
+.div .bottom {
+	margin: 3px;
+	float: left;
+	width: 100%;
+	height: 180px;
+	border: 2px solid gray;
+}
+
+
+.div  .button {
+	padding: 10px 30px 50px 380px;
+	height: 30px;
+	float: right;
+}
+
+
+
+.left-menu {
+	position: absolute;
+	left: 0;
+	width: 400px;
+	padding: 10px 0 0 27px;
+}
+.item-infor-right{
+	float: right; 
+	width: 500px;
+	 height: 100px;
+}
+.item-infor-right .below{
+	float: right;
+	 padding: 2px 49px;
+}
+.div  .blow {
+	padding: 0 30px 50px 380px;
+	height: 30px;
+	float: right;
+}

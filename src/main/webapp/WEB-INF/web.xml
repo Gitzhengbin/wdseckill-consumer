@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<!-- spring 配置 begin -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext-common.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- spring 配置 end -->
+
+	<!-- spring mvc 配置 begin -->
+	<servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:Springmvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		<!-- 
+			1)load-on-startup元素标记容器是否在启动的时候就加载这个servlet(实例化并调用其init()方法)。
+			2)它的值必须是一个整数，表示servlet应该被载入的顺序 
+			3)当值为0或者大于0时，表示容器在应用启动时就加载并初始化这个servlet
+			4)当值小于0或者没有指定时，则表示容器在该servlet被选择时才会去加载 
+			5)正数的值越小，该servlet的优先级越高，应用启动时就越先加载。 
+			6)当值相同时，容器就会自己选择顺序来加载 
+		-->
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- spring mvc 配置 end -->
+	
+	<!-- log4j 系统日志 -->
+	<!-- <context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener> -->
+</web-app>

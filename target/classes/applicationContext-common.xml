@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+	<!-- 配置注解 begin -->
+	<context:component-scan base-package="com.wd.control"/>	
+	<!-- 配置注解 end -->
+	
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="dubbo-wd-service" />
+
+	<!-- 使用multicast广播注册中心暴露服务地址 -->
+	<dubbo:registry address="zookeeper://127.0.0.1:2181" client="zkclient" />
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20881" />
+	
+	<!-- 增加引用远程服务配置 -->
+	<dubbo:reference id="userService" interface="com.wd.service.user.IUserService" check="false"/>
+	<!-- <dubbo:reference id="itemService" interface="com.wd.service.items.IItemService" /> -->
+	
+	<!-- 和本地服务一样使用远程服务 -->
+</beans>
